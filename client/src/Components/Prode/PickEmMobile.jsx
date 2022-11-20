@@ -9,7 +9,7 @@ import {
   Image,
   createIcon,
   Center,
-  useMediaQuery
+  useMediaQuery,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -25,9 +25,9 @@ import {
 } from '../../Redux/actions';
 import { useAuth0 } from '@auth0/auth0-react';
 
-export default function PickEm() {
+export default function PickEmMobile() {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const allCountries = useSelector((state) => state.allCountries);
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
   const matchsFromGroup = useSelector((state) => state.matchsFromGroup);
@@ -35,7 +35,6 @@ export default function PickEm() {
   const [groupFocus, setGroupFocus] = useState('A');
   const [matchFocus, setMatchFocus] = useState('1');
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
 
   useEffect(() => {
     dispatch(getMatchsFromGroup(groupFocus));
@@ -58,18 +57,13 @@ export default function PickEm() {
       allGroupsMatchs.length &&
       matchsFromGroup.length ? (
         <Center
-          minH="100vh"
-          w="100%"
-          flexDirection="column"
-          justifyContent="flex-start"
+          minW="100vw"
+          h="100%"
+          flexDirection="row"
         >
-          <Heading color="white" my="5%" h={'20%'}>
-            Bienvenido a nuestro prode!
-          </Heading>
-
-          <PrincipalMatch match={matchFocus} />
-          <Center w="98%" mt={"1%"} justifyContent="space-between">
-            <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
+          <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
+          <Center mt={'1%'} flexDirection="column" w={"88vw"} h="100%">
+            <PrincipalMatch match={matchFocus} />
             <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
           </Center>
         </Center>
