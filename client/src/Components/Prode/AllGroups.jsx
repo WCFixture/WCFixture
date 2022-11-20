@@ -85,7 +85,6 @@ const AllGroups = ({ groupFocus, setGroup }) => {
       {isShorterThan900 ? (
         <Flex
           w={'12vw'}
-          h={'100%'}
           direction={'column'}
           bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
           borderTopRightRadius="15px"
@@ -94,7 +93,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         >
           <Flex
             h="10%"
-            py={1}
+
             flexDirection="column"
             alignItems={'center'}
             backgroundColor={groupFocus === 'A' ? '#222D80' : 'transparent'}
@@ -111,26 +110,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupAComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               A
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'B' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -147,26 +145,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupBComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               B
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'C' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -183,26 +180,26 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupCComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               C
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
+            
             flexDirection="column"
             backgroundColor={groupFocus === 'D' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -219,26 +216,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupDComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
             D
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'E' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -255,26 +251,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupEComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               E
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'F' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -291,26 +286,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupFComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               F
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'G' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -327,26 +321,25 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupGComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               G
             </Text>
           </Flex>
           <Flex
             h="10%"
-            py={1}
             flexDirection="column"
             backgroundColor={groupFocus === 'H' ? '#222D80' : 'transparent'}
             alignItems={'center'}
@@ -363,20 +356,20 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             {groupHComplete ? (
               <Image
                 mt="10px"
-                w="34px"
-                h="34px"
+                w="30px"
+                h="30px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
                 mt="10px"
                 mx="-5.5px"
-                w="45px"
-                h="34px"
+                w="41px"
+                h="30px"
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            <Text color={'white'} mt="2px" fontSize="20px" align={'center'}>
               H
             </Text>
           </Flex>

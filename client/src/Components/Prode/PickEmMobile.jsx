@@ -62,10 +62,7 @@ export default function PickEmMobile() {
           flexDirection="row"
         >
           <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
-          <Center mt={'1%'} flexDirection="column" w={"88vw"}>
-            <Heading color="white" my="5%" h={'20%'}>
-              Bienvenido a nuestro prode!
-            </Heading>
+          <Center mt={'1%'} flexDirection="column" w={"88vw"} h="100%">
             <PrincipalMatch match={matchFocus} />
             <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
           </Center>

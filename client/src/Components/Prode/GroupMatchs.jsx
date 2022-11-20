@@ -52,9 +52,9 @@ const GroupMatchs = ({ group, setMatch }) => {
           {matchs.length ? (
             <>
               <Flex justifyContent="space-around" alignItems="center">
-                <Heading paddingY={'3%'}>Group {group}</Heading>
+                <Text paddingY={'3%'}>Group {group}</Text>
                 <Image
-                  h={'5vh'}
+                  h={'3vh'}
                   src={
                     groupComplete
                       ? 'https://cdn-icons-png.flaticon.com/512/1443/1443000.png'
@@ -72,9 +72,9 @@ const GroupMatchs = ({ group, setMatch }) => {
                       }}
                       h="8vh"
                       w="48%"
-                      padding={7}
+                      padding={2}
                       marginX={'1%'}
-                      my="2%"
+                      my="7%"
                       justifyContent={'space-between'}
                       _hover={{
                         backgroundColor: 'rgba(25,10,83,1)',
