@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { chequearEmail, getCountries, getMatchsFromGroups, getProde, getProdePoints } from '../../Redux/actions';
 import LogoutButton from '../Auth/Logout';
+import   "./navbar.css"
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState('large');
@@ -42,10 +43,10 @@ export default function Sidebar() {
   }, [user]);
 
   return (
+    <Box left="1%" sx={{ position: '-webkit-sticky', position: 'sticky', top: '0',}}>
     <Flex
       transition="all .5s ease"
-      pos="sticky"
-      left="5"
+      left="2%"
       h="95vh"
       bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
       marginTop="2.5vh"
@@ -142,5 +143,7 @@ export default function Sidebar() {
         </Center>
       )}
     </Flex>
+    </Box>
+
   );
 }

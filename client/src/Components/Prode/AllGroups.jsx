@@ -81,6 +81,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
     userProde.hasOwnProperty('46');
 
   return (
+
     <>
       {isShorterThan900 ? (
         <Flex
@@ -725,6 +726,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         </Flex>
       )}
     </>
+
   );
 };
 

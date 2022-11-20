@@ -1,5 +1,5 @@
 import React from "react";
-import Fixturecontent from "./FixtureContent"
+import MatchCard from "./FixtureContent"
 import {
     Container,
     Stack,
@@ -15,7 +15,7 @@ import {
 const Fixture = () => {
     return(
         <>
-          <Fixturecontent></Fixturecontent>
+          <MatchCard></MatchCard>
         </>
     )}
 
