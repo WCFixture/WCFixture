@@ -29,8 +29,8 @@ const MatchCard = ({ match }) => {
     <>
       {isShorterThan900 ? (
         <>
-          <Flex flexDirection={'column'} alignItems="center">
-            <Image src={countryOne.flag} h="8vw" minW="40px" borderRadius={2} />
+          <Flex flexDirection={'column'} alignItems="center" w="30%">
+            <Image src={countryOne.flag} h="8vw" maxW="38px" borderRadius={2} />
             <Text color="white" fontWeight={500} fontSize="3vw" align={"center"}>{countryOne.name}</Text>
           </Flex>
 
@@ -42,8 +42,8 @@ const MatchCard = ({ match }) => {
             <Text fontWeight={500} color={'white'} fontSize="2vw" mx={2}>&nbsp;-&nbsp;</Text>
           )}
 
-          <Flex flexDirection={'column'} alignItems="center">
-            <Image src={countryTwo.flag} h="8vw" minW="40px" borderRadius={2} />
+          <Flex flexDirection={'column'} alignItems="center" w="30%">
+            <Image src={countryTwo.flag} h="8vw" maxW="38px"  borderRadius={2} />
             <Text color="white" fontWeight={500} fontSize="3vw" align={"center"}>{countryTwo.name}</Text>
           </Flex>
         </>

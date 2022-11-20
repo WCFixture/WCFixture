@@ -97,7 +97,8 @@ const GroupMatchs = ({ group, setMatch }) => {
       ) : (
         <Flex
           w={'60%'}
-          h="48vh"
+          h="53vh"
+          overflow={"hidden"}
           flexDirection="column"
           color={'whiteAlpha.600'}
           borderRadius="25px"

@@ -56,17 +56,18 @@ export default function PickEmMobile() {
       allCountries.length &&
       allGroupsMatchs.length &&
       matchsFromGroup.length ? (
-        <Center
+        <Flex
           minW="100vw"
           h="100%"
           flexDirection="row"
+          alignItems={"flex-start"}
         >
           <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
           <Center mt={'1%'} flexDirection="column" w={"88vw"} h="100%">
             <PrincipalMatch match={matchFocus} />
             <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
           </Center>
-        </Center>
+        </Flex>
       ) : (
         <></>
       )}

@@ -18,7 +18,7 @@ function App() {
   return (
 
     <BrowserRouter>
-      {isLargerThan900 ? <HStack spacing='24px'> <Sidebar /> <Routes>
+      {isLargerThan900 ? <HStack alignItems={"flex-start"} spacing='24px'> <Sidebar /> <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fixture" element={<Fixture />} />
         <Route path="/pickem" element={<PickEm />} />

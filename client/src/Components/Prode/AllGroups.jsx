@@ -378,7 +378,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
       ) : (
         <Flex
           w="39%"
-          h={'48vh'}
+          h={'53vh'}
           color={'whiteAlpha.600'}
           borderRadius="25px"
           bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
@@ -446,7 +446,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('B');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group B
             </Text>
             {allCountries?.slice(4, 8).map((el) => {
@@ -488,7 +488,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('C');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group C
             </Text>
             {allCountries?.slice(8, 12).map((el) => {
@@ -530,7 +530,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('D');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group D
             </Text>
             {allCountries?.slice(12, 16).map((el) => {
@@ -572,7 +572,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('E');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group E
             </Text>
             {allCountries?.slice(16, 20).map((el) => {
@@ -614,7 +614,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('F');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group F
             </Text>
             {allCountries?.slice(20, 24).map((el) => {
@@ -656,7 +656,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('G');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group G
             </Text>
             {allCountries?.slice(24, 28).map((el) => {
@@ -698,7 +698,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('H');
             }}
           >
-            <Text color={'white'} fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group H
             </Text>
             {allCountries?.slice(28, 32).map((el) => {

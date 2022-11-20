@@ -264,6 +264,7 @@ const PrincipalMatch = ({ match }) => {
                 justifyContent={'center'}
                 alignItems="center"
                 direction={'column'}
+                w="15%"
               >
                 <Text fontSize={'4vw'} color="white">
                   {result.local} - {result.away}
@@ -275,6 +276,7 @@ const PrincipalMatch = ({ match }) => {
                     w="100px"
                     colorScheme="green"
                     onClick={saveScore}
+                    display={matchFocus.id == 1 ? "none" : "flex"}
                   >
                     Save
                   </Button>
