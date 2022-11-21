@@ -96,7 +96,7 @@ export default function Sidebar() {
         <NavItem
           navSize={navSize}
           icon={GiTrophyCup}
-          title="Leaderboard"
+          title="Ranking"
           link="/leaderboard"
         />
       </Flex>
