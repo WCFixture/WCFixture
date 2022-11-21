@@ -74,7 +74,7 @@ export default function Fixturecontent() {
           <Text
             mt="4%"
             fontSize="2xl"
-            color="#DBDFF5">13:00</Text>
+            color="#DBDFF5">0-2</Text>
           <Image
             borderRadius={'5px'}
             my="1.3%"
@@ -123,7 +123,7 @@ export default function Fixturecontent() {
           <Text
             mt="4%"
             fontSize="2xl"
-            color="#DBDFF5">10:00</Text>
+            color="#DBDFF5">6-2</Text>
           <Image
             borderRadius={'5px'}
             my="1.3%"
@@ -166,7 +166,7 @@ export default function Fixturecontent() {
           <Text
             mt="4%"
             fontSize="2xl"
-            color="#DBDFF5">13:00</Text>
+            color="#DBDFF5">0-2</Text>
           <Image
             borderRadius={'5px'}
             my="1.3%"
@@ -209,7 +209,7 @@ export default function Fixturecontent() {
           <Text
             mt="4%"
             fontSize="2xl"
-            color="#DBDFF5">16:00</Text>
+            color="#DBDFF5">1-1</Text>
           <Image
             borderRadius={'5px'}
             my="1.3%"
