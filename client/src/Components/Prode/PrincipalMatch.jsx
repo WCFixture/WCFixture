@@ -150,7 +150,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'6vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-                {isAuthenticated ? (
+          {/*       {isAuthenticated ? (
                   <Button
                     h="20px"
                     w="50px"
@@ -159,7 +159,7 @@ const PrincipalMatch = ({ match }) => {
                   >
                     Save
                   </Button>
-                ) : null}
+                ) : null} */}
               </Flex>
 
               <Flex
@@ -269,7 +269,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'4vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-                {isAuthenticated ? (
+              {/*   {isAuthenticated ? (
                   <Button
                     m="0"
                     h="34px"
@@ -280,7 +280,7 @@ const PrincipalMatch = ({ match }) => {
                   >
                     Save
                   </Button>
-                ) : null}
+                ) : null} */}
               </Flex>
 
               <Flex
