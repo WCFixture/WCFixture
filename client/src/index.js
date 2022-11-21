@@ -19,7 +19,7 @@ const config = {
 // 3. extend the theme
 const theme = extendTheme({ config })
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+axios.defaults.baseURL = "https://wcfixture-back-production.up.railway.app" /* || "http://localhost:3001" */;
 
 export default theme
 
