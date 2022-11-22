@@ -11,7 +11,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import { FiMenu, FiHome, FiCalendar } from 'react-icons/fi';
-import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import { GiTrophyCup } from 'react-icons/gi';
 import { BiFootball } from 'react-icons/bi';
 import NavItem from '../SideBar/NavItem';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -95,9 +95,9 @@ export default function Sidebar() {
         />
         <NavItem
           navSize={navSize}
-          icon={AiOutlineQuestionCircle}
-          title="About"
-          link="/about"
+          icon={GiTrophyCup}
+          title="Ranking"
+          link="/leaderboard"
         />
       </Flex>
 

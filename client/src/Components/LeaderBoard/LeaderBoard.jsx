@@ -1,7 +1,6 @@
 import React from "react";
 import {Flex, Box, Text, Image, Center, Divider} from "@chakra-ui/react"
 import TotalUsersStats from "./TotalUsersStats";
-import CurrentUserStats from "./CurrentUserStats";
 
 export default function LeaderBoard(){
   
@@ -15,7 +14,6 @@ export default function LeaderBoard(){
         justifyContent="flex-start"
         alignItems={"flex-start"}>
         <TotalUsersStats></TotalUsersStats>
-        <CurrentUserStats></CurrentUserStats>
         </Center>
     )
 }
