@@ -11,8 +11,7 @@ export default function LeaderBoard(){
         pt="24px"
         pl="10px"
         flexDirection="row"
-        justifyContent="flex-start"
-        alignItems={"flex-start"}>
+       >
         <TotalUsersStats></TotalUsersStats>
         </Center>
     )

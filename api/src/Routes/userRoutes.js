@@ -84,7 +84,7 @@ userRoutes.get('/chequear_user/', async (req, res) => {
 
 userRoutes.get("/prode_points", async (req, res) => {
     try{
-        let json = await User.find({prodeComplete: true}).select({"name": 1, "_id": 0, "picture": 1, "prode.points": 1 })
+        let json = await User.find({prodeComplete: true}).select({"name": 1, "_id": 0, "picture": 1, "prode.points": 1 }).sort({"prode.points":"desc"})
         json = json.filter(value => JSON.stringify(value) !== '{}');
         res.status(200).json(json);
     } catch (error){

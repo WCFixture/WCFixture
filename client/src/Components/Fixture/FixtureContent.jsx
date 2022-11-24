@@ -10,12 +10,14 @@ import {
   Image,
   Box,
   NumberInputStepper,
+  useMediaQuery
 } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 
 export default function Fixturecontent() {
   const allCountries = useSelector((state) => state.allCountries);
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
+  const [isShorterThan900] = useMediaQuery('(max-width: 900px)');
   const fechas = [
     '2022-11-20',
     '2022-11-21',
@@ -34,7 +36,7 @@ export default function Fixturecontent() {
   return (
     /* {allCountries.length &&
       allGroupsMatchs.length ? } */
-    <Container maxW="80%">
+    <Container maxW="80%" display={"flex"} flexDirection="column" justifyContent="center" alignItems={"center"}>
       <Heading
         lineHeight={1.1}
         fontWeight={600}
@@ -42,7 +44,7 @@ export default function Fixturecontent() {
         mt={"5vh"}
       >
         <Text
-          ml="22%"
+          
           as={'span'}
           color="#DBDFF5"
           position={'relative'}
@@ -64,7 +66,7 @@ export default function Fixturecontent() {
       {fechas.map((fecha) => {
         return (
           <>
-            <Text fontSize="3xl" color="#DBDFF5" mt="5%" ml="15%">
+            <Text fontSize="3xl" color="#DBDFF5" mt="3%">
               {fecha.slice(-2) +
                 ' ' +
                 (fecha.slice(5, 7) == '11' ? 'Nov' : 'Dic') +
@@ -78,21 +80,22 @@ export default function Fixturecontent() {
               .map((m) => {
                 return (
                   <Flex
-                    my="5%"
-                    ml="20%"
-                    w="60%"
-                    h="12vh"
+                    my="3%"
+                    
+                    w={isShorterThan900? "130%" :"60%"}
+                    h={isShorterThan900? "8vh" :"12vh"}
                     bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
                     borderRadius="20px"
                     direction={'row'}
-                    justifyContent={'space-around'}
+                    justifyContent={'center'}
+                    alignItems="center"
                     overflow="hidden"
                   >
                     <Text
-                      minW="20%"
+                      w="25%"
                       align="center"
-                      mt="4%"
-                      fontSize="2xl"
+                      
+                      fontSize={isShorterThan900? "16px" :"2xl"}
                       color="#DBDFF5"
                     >
                       {
@@ -103,9 +106,9 @@ export default function Fixturecontent() {
                     </Text>
                     <Image
                       borderRadius={'5px'}
-                      h={'80%'}
+                      h={isShorterThan900? "70%": '80%'}
                       w="15%"
-                      my="1.3%"
+                      
                       src={
                         allCountries.find((c) => {
                           return c.id === m.countries[0];
@@ -113,11 +116,11 @@ export default function Fixturecontent() {
                       }
                     ></Image>
                     {m.status === 'pendient' ? (
-                      <Text mt="4%" fontSize="2xl" color="#DBDFF5">
+                      <Text ml={isShorterThan900?"2%" :"4%"} mr={isShorterThan900?"2%" :"4%"} fontSize={isShorterThan900? "16px" :"2xl"} color="#DBDFF5">
                         {m.date.slice(11, 16)}
                       </Text>
                     ) : (
-                      <Text mt="4%" fontSize="2xl" color="#DBDFF5">
+                      <Text ml={isShorterThan900?"2%" :"4%"} mr={isShorterThan900?"2%" :"4%"} fontSize={isShorterThan900? "16px" :"2xl"} color="#DBDFF5">
                         {m.result.local + " - " + m.result.away}
                       </Text>
                     )}
@@ -125,7 +128,7 @@ export default function Fixturecontent() {
                     <Image
                       borderRadius={'5px'}
                       my="1.3%"
-                      h={'80%'}
+                      h={isShorterThan900? "70%": '80%'}
                       w="15%"
                       src={
                         allCountries.find((c) => {
@@ -134,10 +137,10 @@ export default function Fixturecontent() {
                       }
                     ></Image>
                     <Text
-                      minW="20%"
+                      w="25%"
                       align="center"
-                      mt="4%"
-                      fontSize="2xl"
+                      
+                      fontSize={isShorterThan900? "16px" :"2xl"}
                       color="#DBDFF5"
                     >
                       {
