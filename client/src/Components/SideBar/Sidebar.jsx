@@ -18,7 +18,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Auth/Login';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { chequearEmail, getCountries, getMatchsFromGroups, getProde, getProdePoints } from '../../Redux/actions';
+import { chequearEmail, getCountries, getMatchsFromGroups, getMatchsFromPlayoff, getProde, getProdePoints } from '../../Redux/actions';
 import LogoutButton from '../Auth/Logout';
 import   "./navbar.css"
 
@@ -31,6 +31,7 @@ export default function Sidebar() {
     dispatch(getCountries())
     dispatch(getMatchsFromGroups())
     dispatch(getProdePoints())
+    dispatch(getMatchsFromPlayoff())
   }, []);
 
   useEffect(() => {
