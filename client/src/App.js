@@ -9,6 +9,8 @@ import LeaderBoard from "./Components/LeaderBoard/LeaderBoard";
 import { HStack, VStack } from '@chakra-ui/react'
 import SidebarMobile from "./Components/SideBar/SidebarMobile";
 import { useMediaQuery } from "@chakra-ui/react"
+import PlayOffMatch from "./Components/Prode/PlayOffMatch";
+import PickEmPlayOff from "./Components/Prode/PickEmPlayOff";
 
 function App() {
 
@@ -24,12 +26,15 @@ function App() {
         <Route path="/pickem" element={<PickEm />} />
         <Route path="/about" element={<About />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
+        <Route path="/playoff" element={<PickEmPlayOff />} />
       </Routes> </HStack> : <VStack spacing='24px'> <SidebarMobile /> <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fixture" element={<Fixture />} />
         <Route path="/pickem" element={<PickEmMobile />} />
         <Route path="/about" element={<About />} />
-        <Route path="/leaderboard" element={<LeaderBoard />} />
+          <Route path="/leaderboard" element={<LeaderBoard />} />
+          
+        <Route path="/playoff" element={<PickEmPlayOff />} />
       </Routes> </VStack>}
     </BrowserRouter>
 

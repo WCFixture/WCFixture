@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_COUNTRIES, GET_MATCHS_FROM_GROUP, GET_MATCHS_FROM_GROUPS, GET_PRODE, UPDATE_PRODE, GET_PRODE_POINTS } from '../consts';
+import { GET_COUNTRIES, GET_MATCHS_FROM_GROUP, GET_MATCHS_FROM_GROUPS, GET_PRODE, UPDATE_PRODE, GET_PRODE_POINTS, GET_MATCHS_FROM_PLAYOFF } from '../consts';
 
 
 export function getCountries() {
@@ -67,6 +67,16 @@ export function getProdePoints(){
         let json = await axios.get("/user/prode_points")
         return dispatch({
             type: GET_PRODE_POINTS,
+            payload: json.data
+        })
+    }
+}
+
+export function getMatchsFromPlayoff() {
+    return async function (dispatch) {
+        let json = await axios.get("/match/get_all_from_playoff")
+        return dispatch({
+            type: GET_MATCHS_FROM_PLAYOFF,
             payload: json.data
         })
     }

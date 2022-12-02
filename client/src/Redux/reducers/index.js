@@ -1,11 +1,12 @@
-import { GET_COUNTRIES, GET_MATCHS_FROM_GROUPS, GET_MATCHS_FROM_GROUP, GET_PRODE, UPDATE_PRODE, GET_PRODE_POINTS } from "../consts"
+import { GET_COUNTRIES, GET_MATCHS_FROM_GROUPS, GET_MATCHS_FROM_GROUP, GET_PRODE, UPDATE_PRODE, GET_PRODE_POINTS, GET_MATCHS_FROM_PLAYOFF } from "../consts"
 
 const initialState = {
     userProde: {},
     allGroupsMatchs: [],
     allCountries: [],
     matchsFromGroup: [],
-    allProdePoints: []
+    allProdePoints: [],
+    matchsFromPlayoff: []
 }
 
 
@@ -40,6 +41,11 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 allProdePoints: action.payload
+            }
+        case GET_MATCHS_FROM_PLAYOFF:
+            return {
+                ...state,
+                matchsFromPlayoff: action.payload
             }
         default:
             return state
