@@ -1,0 +1,5 @@
+.Nvb{
+    position: static !important;
+    position: -webkit-sticky !important;
+    top: 0 !important;
+}
