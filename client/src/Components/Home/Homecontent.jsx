@@ -51,7 +51,7 @@ import CarouselHome  from "./CarouselHome"
             </Heading>
             <Text color={'gray.500'}>
               Con el fixture vas a tener acceso a toda la info de los partidos, en un solo lugar vas a tener acceso a las fechas, horarios y resultados.
-              Además podes completar el prode, en el cual jugas a acertar los resultados y participas por premios en dinero real.
+              Además podes completar el prode, en el cual jugas a acertar los resultados.
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
