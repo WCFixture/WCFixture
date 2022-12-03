@@ -9,12 +9,13 @@ import {
   Image,
   createIcon,
   Center,
-  useMediaQuery
+  useMediaQuery,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import GroupMatchs from './GroupMatchs';
 import AllGroups from './AllGroups';
+import LandingPage from './LandingProde'
 import PrincipalMatch from './PrincipalMatch';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
@@ -28,7 +29,7 @@ import PickEmPlayOff from './PickEmPlayOff';
 
 export default function PickEm() {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const allCountries = useSelector((state) => state.allCountries);
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
   const matchsFromGroup = useSelector((state) => state.matchsFromGroup);
@@ -37,7 +38,8 @@ export default function PickEm() {
   const [matchFocus, setMatchFocus] = useState('1');
   const [faseFocus, setFaseFocus] = useState("0");
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
+  const [prodeStartedLocal, setProdeStartedLocal] = useState(false);
 
   useEffect(() => {
     dispatch(getMatchsFromGroup(groupFocus));
@@ -65,9 +67,12 @@ export default function PickEm() {
           flexDirection="column"
           justifyContent="flex-start"
         >
-          <Heading color="white" my="1.5%" h={'20%'}>
-            Bienvenido a nuestro prode!
-            </Heading>
+
+          {userProde.prodeStarted || prodeStartedLocal ? (
+            <>
+              <Heading color="white" my="5%" h={'20%'}>
+                Bienvenido a nuestro prode!
+              </Heading>
          { faseFocus === "0" ? <> <Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
         backgroundColor: '#2D033B'
       }}   color="white"  my="1%" onClick={() => setFaseFocus("1")}>PlayOff</Button>
@@ -78,9 +83,13 @@ export default function PickEm() {
               </Center> </> : <><Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
         backgroundColor: '#2D033B'
       }}   color="white" my="1%" onClick={() => setFaseFocus("0")}>Groups</Button> <PickEmPlayOff></PickEmPlayOff></>}
-            </Center>
+              </Center>
+            </>
+          ) : (
+            <LandingPage setLocal={setProdeStartedLocal}></LandingPage>
+          )}
+        </Center>
 
-          
       ) : (
         <></>
       )}
