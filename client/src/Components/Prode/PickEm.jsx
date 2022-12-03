@@ -70,20 +70,24 @@ export default function PickEm() {
 
           {userProde.prodeStarted || prodeStartedLocal ? (
             <>
-              <Heading color="white" my="5%" h={'20%'}>
+              <Heading color="white" my="1.5%" h={'20%'}>
                 Bienvenido a nuestro prode!
               </Heading>
-         { faseFocus === "0" ? <> <Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
-        backgroundColor: '#2D033B'
-      }}   color="white"  my="1%" onClick={() => setFaseFocus("1")}>PlayOff</Button>
-              <PrincipalMatch match={matchFocus} />
-              <Center w="98%" mt={"1%"} justifyContent="space-between">
-                <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
-                <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
-              </Center> </> : <><Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
-        backgroundColor: '#2D033B'
-      }}   color="white" my="1%" onClick={() => setFaseFocus("0")}>Groups</Button> <PickEmPlayOff></PickEmPlayOff></>}
-              </Center>
+                {faseFocus === "0" ? (<>
+                  <Button backgroundColor={"rgba(25,10,83,1)"} _hover={{backgroundColor: '#2D033B'}}color="white"  my="1%" onClick={() => setFaseFocus("1")}>PlayOff</Button>
+                 <PrincipalMatch match={matchFocus} />
+                 <Center w="98%" mt={"1%"} justifyContent="space-between">
+                  <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
+                  <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
+                 </Center> </>) : (
+                    <><Button backgroundColor={"rgba(25,10,83,1)"}
+                      _hover={{
+                      backgroundColor: '#2D033B'
+                    }}
+                    color="white" my="1%" onClick={() => setFaseFocus("0")}>
+                    Groups</Button>
+                    <PickEmPlayOff></PickEmPlayOff></>)}
+              
             </>
           ) : (
             <LandingPage setLocal={setProdeStartedLocal}></LandingPage>
