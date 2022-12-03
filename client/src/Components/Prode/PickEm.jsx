@@ -25,6 +25,7 @@ import {
   getProde,
 } from '../../Redux/actions';
 import { useAuth0 } from '@auth0/auth0-react';
+import PickEmPlayOff from './PickEmPlayOff';
 
 export default function PickEm() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ export default function PickEm() {
   const userProde = useSelector((state) => state.userProde);
   const [groupFocus, setGroupFocus] = useState('A');
   const [matchFocus, setMatchFocus] = useState('1');
+  const [faseFocus, setFaseFocus] = useState("0");
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
   const [prodeStartedLocal, setProdeStartedLocal] = useState(false);
@@ -51,7 +53,7 @@ export default function PickEm() {
       dispatch(getProde(user.email));
     }
   }, [user]);
-
+ 
   return (
     <>
       {!isLoading &&
@@ -65,22 +67,29 @@ export default function PickEm() {
           flexDirection="column"
           justifyContent="flex-start"
         >
+
           {userProde.prodeStarted || prodeStartedLocal ? (
             <>
               <Heading color="white" my="5%" h={'20%'}>
                 Bienvenido a nuestro prode!
               </Heading>
-
+         { faseFocus === "0" ? <> <Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
+        backgroundColor: '#2D033B'
+      }}   color="white"  my="1%" onClick={() => setFaseFocus("1")}>PlayOff</Button>
               <PrincipalMatch match={matchFocus} />
-              <Center w="98%" mt={'1%'} justifyContent="space-between">
+              <Center w="98%" mt={"1%"} justifyContent="space-between">
                 <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
                 <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
+              </Center> </> : <><Button backgroundColor={"rgba(25,10,83,1)"} _hover={{
+        backgroundColor: '#2D033B'
+      }}   color="white" my="1%" onClick={() => setFaseFocus("0")}>Groups</Button> <PickEmPlayOff></PickEmPlayOff></>}
               </Center>
             </>
           ) : (
             <LandingPage setLocal={setProdeStartedLocal}></LandingPage>
           )}
         </Center>
+
       ) : (
         <></>
       )}

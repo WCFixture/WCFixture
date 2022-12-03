@@ -23,16 +23,24 @@ const PrincipalMatch = ({ match }) => {
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
   const userProde = useSelector((state) => state.userProde);
   const [isShorterThan900] = useMediaQuery('(max-width: 900px)');
-  const matchFocus = allGroupsMatchs.find((m) => {
-    return match === m.id;
-  });
+  const allPlayOffMatchs = useSelector((state) => state.matchsFromPlayoff)
+  if (match < 49) {
+   var matchFocus = allGroupsMatchs.find((m) => {
+      return match === m.id;
+    });
+  } else {
+    var matchFocus = allPlayOffMatchs.find((m) => {
+      return match === m.id;
+    });
+  }
+
   const { user, isAuthenticated } = useAuth0();
 
   const countryOne = allCountries.find((c) => {
-    return c.id === matchFocus.countries[0];
+    return c.id === matchFocus?.countries[0];
   });
   const countryTwo = allCountries.find((c) => {
-    return c.id === matchFocus.countries[1];
+    return c.id === matchFocus?.countries[1];
   });
   const [result, setResult] = useState({
     local: 0,
@@ -150,7 +158,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'6vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-          {/*       {isAuthenticated ? (
+                {isAuthenticated && matchFocus.id>48 ? (
                   <Button
                     h="20px"
                     w="50px"
@@ -159,7 +167,7 @@ const PrincipalMatch = ({ match }) => {
                   >
                     Save
                   </Button>
-                ) : null} */}
+                ) : null}
               </Flex>
 
               <Flex
@@ -269,7 +277,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'4vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-              {/*   {isAuthenticated ? (
+                {isAuthenticated && matchFocus.id>48 ? (
                   <Button
                     m="0"
                     h="34px"
@@ -280,7 +288,7 @@ const PrincipalMatch = ({ match }) => {
                   >
                     Save
                   </Button>
-                ) : null} */}
+                ) : null}
               </Flex>
 
               <Flex

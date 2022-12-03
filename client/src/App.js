@@ -9,7 +9,6 @@ import LeaderBoard from "./Components/LeaderBoard/LeaderBoard";
 import { HStack, VStack } from '@chakra-ui/react'
 import SidebarMobile from "./Components/SideBar/SidebarMobile";
 import { useMediaQuery } from "@chakra-ui/react"
-import PlayOffMatch from "./Components/Prode/PlayOffMatch";
 import PickEmPlayOff from "./Components/Prode/PickEmPlayOff";
 
 function App() {

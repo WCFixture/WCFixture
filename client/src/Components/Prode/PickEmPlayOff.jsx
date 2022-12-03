@@ -1,22 +1,16 @@
 import React from "react";
-import PlayOffMatch from "./PlayOffMatch";
+import PlayOffAllMatches from "./PlayOffAllMatches";
 import { Flex } from "@chakra-ui/react"
-import { useSelector } from "react-redux";
-export default function PickEmPlayOff() {
-  const matches = useSelector((state) => state.matchsFromPlayoff)
-  
-  return (
+import PrincipalMatch from "./PrincipalMatch";
+import { useState } from "react";
 
-      <Flex h="100vh" direction={"column"} justifyContent="space-evenly">
-      {matches?.slice(0, 4).map((m) => {
-        return (
-          <PlayOffMatch match={m}></PlayOffMatch>
-        )
-      })}
-      </Flex> 
-     
-      
-   
+export default function PickEmPlayOff() {
+  const [matchFocus, setMatchFocus] = useState('49');
+  return (
+    <Flex direction={"column"}>
+      <PrincipalMatch match={matchFocus}></PrincipalMatch>
+    <PlayOffAllMatches setMatch={setMatchFocus}></PlayOffAllMatches>
+    </Flex>
     
   )
 }
