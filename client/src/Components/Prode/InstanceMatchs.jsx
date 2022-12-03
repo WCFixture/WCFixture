@@ -34,7 +34,10 @@ const InstanceMatchs = ({ instance, setMatch }) => {
     userProde.hasOwnProperty(matchsIds[8]);
 
   useEffect(() => {
-    setMatch(matchs[0].id);
+    if (matchs.length) {
+      setMatch(matchs[0].id);
+    }
+   
   }, [matchs]);
 
   return (
