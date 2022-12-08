@@ -23,19 +23,14 @@ const InstanceMatchs = ({ instance, setMatch }) => {
     return m.id;
   });
   let instanceComplete =
-    userProde.hasOwnProperty(matchsIds[0]) &&
-    userProde.hasOwnProperty(matchsIds[1]) &&
-    userProde.hasOwnProperty(matchsIds[2]) &&
-    userProde.hasOwnProperty(matchsIds[3]) &&
-    userProde.hasOwnProperty(matchsIds[4]) &&
-    userProde.hasOwnProperty(matchsIds[5]) &&
-    userProde.hasOwnProperty(matchsIds[6]) &&
-    userProde.hasOwnProperty(matchsIds[7]) &&
-    userProde.hasOwnProperty(matchsIds[8]);
+    userProde.hasOwnProperty(matchsIds[8]) &&
+    userProde.hasOwnProperty(matchsIds[9]) &&
+    userProde.hasOwnProperty(matchsIds[10]) &&
+    userProde.hasOwnProperty(matchsIds[11]);
 
   useEffect(() => {
     if (matchs.length) {
-      setMatch(matchs[0].id);
+      setMatch(matchs[8].id);
     }
    
   }, [matchs]);
@@ -65,7 +60,7 @@ const InstanceMatchs = ({ instance, setMatch }) => {
             </Flex>
             <Divider borderColor={'blackAlpha.800'} />
             <Flex wrap="wrap" justifyItems="center">
-              {matchs?.slice(0, 8).map((m) => {
+              {matchs?.slice(8, 12).map((m) => {
                 return (
                   <Center
                     onClick={() => {
