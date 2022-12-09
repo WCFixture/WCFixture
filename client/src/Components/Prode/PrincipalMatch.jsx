@@ -158,7 +158,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'6vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-                {isAuthenticated && matchFocus.id>56? (
+                {isAuthenticated && matchFocus.id>60? (
                   <Button
                     h="20px"
                     w="50px"
@@ -277,7 +277,7 @@ const PrincipalMatch = ({ match }) => {
                 <Text fontSize={'4vw'} color="white">
                   {result.local} - {result.away}
                 </Text>
-                {isAuthenticated && matchFocus.id>56 ? (
+                {isAuthenticated && matchFocus.id>60 ? (
                   <Button
                     m="0"
                     h="34px"
