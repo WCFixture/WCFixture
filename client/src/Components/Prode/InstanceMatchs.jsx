@@ -23,14 +23,12 @@ const InstanceMatchs = ({ instance, setMatch }) => {
     return m.id;
   });
   let instanceComplete =
-    userProde.hasOwnProperty(matchsIds[8]) &&
-    userProde.hasOwnProperty(matchsIds[9]) &&
-    userProde.hasOwnProperty(matchsIds[10]) &&
-    userProde.hasOwnProperty(matchsIds[11]);
+    userProde.hasOwnProperty(matchsIds[12]) &&
+    userProde.hasOwnProperty(matchsIds[13]);
 
   useEffect(() => {
     if (matchs.length) {
-      setMatch(matchs[8].id);
+      setMatch(matchs[12].id);
     }
    
   }, [matchs]);
@@ -48,7 +46,7 @@ const InstanceMatchs = ({ instance, setMatch }) => {
         {matchs.length ? (
           <>
             <Flex justifyContent="space-around" alignItems="center">
-              <Text paddingY={'3%'}>Round of 16</Text>
+              <Text paddingY={'3%'}>Semi-Finals</Text>
               <Image
                 h={'3vh'}
                 src={
@@ -60,14 +58,14 @@ const InstanceMatchs = ({ instance, setMatch }) => {
             </Flex>
             <Divider borderColor={'blackAlpha.800'} />
             <Flex wrap="wrap" justifyItems="center">
-              {matchs?.slice(8, 12).map((m) => {
+              {matchs?.slice(12, 14).map((m) => {
                 return (
                   <Center
                     onClick={() => {
                       setMatch(m.id);
                     }}
                     h="8vh"
-                    w="48%"
+                    w="80%"
                     padding={2}
                     marginX={'1%'}
                     my="7%"
