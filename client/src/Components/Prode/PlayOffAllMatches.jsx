@@ -29,7 +29,7 @@ export default function PlayOffAllMatches({ setMatch }) {
         {matches
           ?.filter((m) => m.date == '2022-12-13T00:00:00.000Z')
           .map((m) => {
-            return <PlayOffMatch match={m}></PlayOffMatch>;
+            return <PlayOffMatch match={m} setMatch={setMatch}></PlayOffMatch>;
           })}
       </Flex>
       <Flex ml="1%" mr="1%" direction={'column'} justifyContent="space-around">
@@ -43,7 +43,7 @@ export default function PlayOffAllMatches({ setMatch }) {
         {matches
           ?.filter((m) => m.date == '2022-12-14T00:00:00.000Z')
           .map((m) => {
-            return <PlayOffMatch match={m}></PlayOffMatch>;
+            return <PlayOffMatch match={m} setMatch={setMatch}></PlayOffMatch>;
           })}
       </Flex>
       <Flex ml="1%" mr="1%" direction={'column'} justifyContent="space-around">
